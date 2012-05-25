@@ -8,6 +8,6 @@ made by g2x3k & someguy123 2011-2012 (c)
 
 INSTALL:
 put files in www dir, rename & edit config.example.php with proper values
-
+and dont forget structure.sql for the db...
 
 with great powers come great resposibility .
