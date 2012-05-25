@@ -8,17 +8,7 @@
     </a><br>-->
 <a href="http://pool-x.eu"><img src="http://i.imgur.com/W35fI.png"><br>
 <br>
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-2429044776247714";
-/* wallet.it.cx */
-google_ad_slot = "5348403335";
-google_ad_width = 120;
-google_ad_height = 600;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
+
 <br>
 <br>
 </a>
