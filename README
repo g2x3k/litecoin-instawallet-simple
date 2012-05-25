@@ -1,7 +1,7 @@
 litecoin instawallet-simple public release
 ------------------------------------------
-well not much to say other then its a basic
-concept of an instawallet for ****coins
+Forum Thread: https://bitcointalk.org/index.php?topic=55025.0
+this is the simplest version of it, other might get released in time
 
 made by g2x3k & someguy123 2011-2012 (c)
 
@@ -10,4 +10,4 @@ INSTALL:
 put files in www dir, rename & edit config.example.php with proper values
 and dont forget structure.sql for the db...
 
-with great powers come great resposibility .
+with great powers come great resposibility.

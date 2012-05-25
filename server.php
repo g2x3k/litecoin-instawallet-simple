@@ -12,7 +12,8 @@ include('templates/header.php');
         <div class="row">
           <div class="span10">
             <?php
-            if ($_SERVER['REMOTE_ADDR'] != "188.176.162.157" and $_SERVER['REMOTE_ADDR'] != gethostbyname('cg999.ath.cx')) {
+			// deny access to all other then following ip
+            if ($_SERVER['REMOTE_ADDR'] != "127.0.0.1" ) {
               echo '<div class="alert-message error" data-alert="alert" style="margin-right: 20px;"><a class="close" onclick="\$().alert()" href="#">&times</a><p>Access Denied.</p></div>';
             }
             else {
