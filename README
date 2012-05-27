@@ -10,4 +10,19 @@ INSTALL:
 put files in www dir, rename & edit config.example.php with proper values
 and dont forget structure.sql for the db...
 
+apache config {
+<VirtualHost *:80>
+        ServerName wallet.it.cx
+        DocumentRoot /var/www/wallet
+        <Directory /var/www/wallet>
+                Options -Indexes
+                RewriteEngine on
+                RewriteCond %{REQUEST_FILENAME} !-d
+                RewriteCond %{REQUEST_FILENAME}\.php -f
+                RewriteRule ^(.*)$ $1.php
+                AllowOverride none
+        </Directory>
+</VirtualHost>
+}
+
 with great powers come great resposibility.
