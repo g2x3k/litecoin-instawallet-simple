@@ -25,8 +25,13 @@ apache config {
 </VirtualHost>
 }
 
-with great powers come great resposibility.
 
-// to use core/banned.php
+to use the simple ban function:
+put include ('core/banned.php'); on top of every page you want IP banned from.
 
-just just put include ('core/banned.php'); on top of every page you want IP banned from.
+
+Contributors
+Greedi
+
+
+With great powers come great resposibility.

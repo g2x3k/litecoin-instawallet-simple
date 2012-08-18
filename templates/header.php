@@ -90,19 +90,16 @@
 
           if (isset($_SESSION["key"]))
           mnu_btn("vault?key=$_SESSION[key]", "My Vault");
-          
-          
+                    
           foreach ($adminips as $allowed) {
           	if ($_SERVER['REMOTE_ADDR'] == $allowed) {
           		mnu_btn("server", "Server");
           		break;
           	}        		          	
-          }     
-          
+          }               
           
           if ($_SESSION["key"])
           mnu_btn("logout", "Logout");
-
 
           function mnu_btn($link,$title,$preg = false) {
 
@@ -130,3 +127,12 @@
     <div class="container">
       <div class="content">
       <!-- END HEADER.PHP -->
+      <?php 
+      if ($maintenance == true && !in_array($_SERVER['REMOTE_ADDR'], $adminips)) {
+      	
+      	include("./maintenance.php");
+      	
+      	include("footer.php");
+      	die();
+      }          
+      ?>
