@@ -18,8 +18,7 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link rel="stylesheet/less" type="text/css" href="lib/bootstrap.less">
-    <script src="js/less-1.1.5.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">      
     <script src="js/bootstrap-alerts.js" /></script>
     <style type="text/css">
       /* Override some defaults */
