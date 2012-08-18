@@ -19,6 +19,7 @@ CREATE TABLE IF NOT EXISTS `instaltc` (
   `id` int(5) NOT NULL AUTO_INCREMENT,
   `ltcaddress` char(34) NOT NULL,
   `url` char(64) NOT NULL,
+  `pin` char(64) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=412 ;
 
