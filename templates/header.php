@@ -84,14 +84,26 @@
           <a class="brand" href="/"><font style="font-size: 20px;">Litecoin Wallet</font><font style="font-size: 9px; "></font> </a>
           <ul class="nav">
           <?
-          // menu
-          mnu_btn("/", "Home", "index.php");
-          /*if (!isset($_SESSION["key"]))
-          mnu_btn("getaddress.php", "New Address");*/
+          // menu          
+          mnu_btn("index.php", "Home", "index.php");
+          
+
           if (isset($_SESSION["key"]))
           mnu_btn("vault?key=$_SESSION[key]", "My Vault");
-          if ($_SERVER['REMOTE_ADDR'] == "188.176.162.157" or $_SERVER['REMOTE_ADDR'] == gethostbyname('cg999.ath.cx'))
-          mnu_btn("server", "Server");
+          
+          $adminips = array(
+          		"g2x3k" => "87.58.119.133",
+          		"other" => "someip"
+          		);
+          
+          foreach ($adminips as $allowed) {
+          	if ($_SERVER['REMOTE_ADDR'] == $allowed) {
+          		mnu_btn("server", "Server");
+          		break;
+          	}        		          	
+          }     
+          
+          
           if ($_SESSION["key"])
           mnu_btn("logout", "Logout");
 

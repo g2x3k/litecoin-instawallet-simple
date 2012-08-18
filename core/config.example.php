@@ -24,6 +24,13 @@ $minsend  = 1;                          // minimum allowed to send at a time
 $publickey = "PubKey";
 $privatekey = "PriVKeY";
 
+// admin ips
+$adminips = array(
+		"g2x3k" => "87.58.119.133",
+		"other" => "someip"
+);
+
+
 // NOT IMPLEMENTED YET ...
 $minfee   = 0;                          // min. hard fee on all transactions
 $feeperc  = 2.5;                        // fee for outgoing transactions in percentage

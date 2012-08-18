@@ -64,10 +64,39 @@ if ($_GET ['key']) {
 		// text-align: center;'
 		// readonly=readonly
 		// /></h4>";
+		
 		echo "<p><h2>Balance: " . $addr->ltc->getbalance ( $_GET ['key'], 5 ) . "</h2><i style='font-size: 9px; padding-top:0px;margin-top:0px;'>Deposits updated after 5 confirms, 0.1 LTC reserved for fee</i></p>";
 		echo "<h4>Send LTC:</h4>";
 		echo "<form class='form-stacked' action='{$_SERVER['PHP_SELF']}?{$_SERVER['QUERY_STRING']}' method='POST'><label for='address'>Address to send to</label><input type='text' id='address' name='address' style='width: 260px; text-align: center;'/>
                 <br /><label for='amount'>Amount of LTC to send</label><input type='text' id='amount' name='amount' style='width: 180px; text-align: right;' /> &nbsp; <input type='submit' class='btn info'value='SEND'/></form>";
+		
+		?><br> <br>
+		<table style="width: 560px;">
+			<thead>
+				<tr>
+					<td><h4>Security:</h4></td>
+				</tr>
+			</thead>
+			<tr>
+				<td style="border: 0px;">
+					<form class='form-stacked'>
+
+						<label for="pass">Set A Password</label> <input type='password'
+							id='pass' name='pass' style='width: 180px; text-align: left;' /><br>
+						<label for="pass2">Retype</label> <input type='password'
+							id='pass2' name='pass2' style='width: 180px; text-align: left;' />
+						&nbsp; <input type='submit' class='btn info' value='SET' /> <br> <i>setting
+							will require you to enter it to access your vault</i>
+
+					</form>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+		</table>
+				<?
+		
 		echo "<br><h4>Your last 15 transactions:</h4>";
 		
 		echo "<div style=\"margin-right: 20px;\"><table class='bordered-table condensed-table zebra-striped'><tr><td>Confirms</td><td>Transaction ID</td><td>Amount</td><td>Fee</td></tr>";
