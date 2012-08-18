@@ -1,28 +1,24 @@
 <?
-function returntimer ($pagetimer) {
-  // better then previous but still bit shitty assumes all pages are +10ms :)
-  $timer = timer()-$pagetimer;
-  if ($timer[0] == 0) {
-    if (substr($timer,2,1) == 0)
-    $timer = substr($timer,3,2). " ms"; // +10 ms
-    else
-    $timer = substr($timer,2,3). " ms"; // +100 ms
-  }
-  else {
-    $timer = $timer."  sec";
-  }
-  return $timer;
+function mnu_btn($link, $title, $preg = false) {
+	if (! $preg)
+		$preg = explode ( "?", $link );
+	else
+		$preg [0] = $preg;
+	
+	if (preg_match ( "/" . str_replace ( "/", "\/", $preg [0] ) . "/i", $_SERVER ['SCRIPT_FILENAME'] ))
+		echo '<li class="active"><a href="' . $link . '">' . $title . '</a></li>';
+	else
+		echo '<li><a href="' . $link . '">' . $title . '</a></li>';
 }
-
-function timer () {
-  $a = explode (' ',microtime());
-  return(double) $a[0] + $a[1];
+function timer() {
+	$a = explode ( ' ', microtime () );
+	return ( double ) $a [0] + $a [1];
 }
 
 function srsnot($srserror) {
-  return '          <div class="alert-message alert" data-alert="alert" style="margin-right: 20px;"><p>' . $srserror . '</p></div>';
+	return '          <div class="alert-message alert" data-alert="alert" style="margin-right: 20px;"><p>' . $srserror . '</p></div>';
 }
 function srserr($srserror) {
-  return '          <div class="alert-message error" data-alert="alert" style="margin-right: 20px;"><p>' . $srserror . '</p></div>';
+	return '          <div class="alert-message error" data-alert="alert" style="margin-right: 20px;"><p>' . $srserror . '</p></div>';
 }
 ?>
