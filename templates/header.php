@@ -91,10 +91,6 @@
           if (isset($_SESSION["key"]))
           mnu_btn("vault?key=$_SESSION[key]", "My Vault");
           
-          $adminips = array(
-          		"g2x3k" => "87.58.119.133",
-          		"other" => "someip"
-          		);
           
           foreach ($adminips as $allowed) {
           	if ($_SERVER['REMOTE_ADDR'] == $allowed) {
