@@ -31,15 +31,6 @@ foreach ( $adminips as $allowed ) {
 if ($isadmin != true) {
 	echo '<div class="alert-message error" data-alert="alert" style="margin-right: 20px;"><a class="close" onclick="\$().alert()" href="#">&times</a><p>Access Denied.</p></div>';
 } else {
-	switch ($_GET ['debug']) {
-		case "enable" :
-			setcookie ( "debug", 1, time () + 3600 );
-			echo '<div class="alert-message error" data-alert="alert"><a class="close" onclick="\$().alert()" href="#">&times</a><p>Debugging enabled</p></div>';
-			break;
-		case "disable" :
-			setcookie ( "debug", 0, time () - 3600 );
-			echo '<div class="alert-message error" data-alert="alert"><a class="close" onclick="\$().alert()" href="#">&times</a><p>Debugging disabled</p></div>';
-	}
 	
 	echo '
             <div style="margin-right: 20px;">
@@ -78,12 +69,7 @@ if ($isadmin != true) {
 		echo "<tr><td>" . $herp ['confirmations'] . "</td><td><input type='text' value='" . $herp ['address'] . "' /></td><td>" . $herp ['amount'] . "</td><td>" . ($herp ['fee'] ? $herp ["fee"] : 0) . "</td><td><input type='text' value='" . $herp ['txid'] . "' /></td></tr>";
 	}
 	echo "</table>";
-	
-	$transactions = $btclient->query ( 'listtransactions', '', '240' );
-	$numAccounts = count ( $transactions );
-	for($i = 0; $i < $numAccounts; $i ++) {
-		echo "lol";
-	}
+		
 
 }
 
