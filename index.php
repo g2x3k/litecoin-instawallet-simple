@@ -41,9 +41,29 @@ echo '
 
 
 
-              foreach($dump as $herp) {
-                echo "<tr><td>" . $herp['confirmations'] . "</td><td>" . $herp['category'] . "</td><td>". $herp['amount'] . "</td><td>" . ($herp['fee'] ? $herp["fee"] : 0) . "</td></tr>";
-              }
+              
+
+           	foreach ($dump as $herp) {
+           		if ($herp['category'] != "move") {
+           			if ($herp['category'] == "send") {
+           				$herp['category'] = '<span class="label important">'.$herp['category'].'</span>';
+           				$herp['amount'] = $herp['amount'] * -1;
+           				
+           				$color = "maroon";
+           			} else {
+           				$herp['category'] = '<span class="label success">'.$herp['category'].'</span>';
+           				$color = "green";
+           			}
+           			$herp["fee"] = $herp["fee"] * -1;
+           			echo "<tr><td>" . $herp['confirmations'] . "</td><td>" . $herp['category'] .
+           			"</td><td><font color='{$color}'>" . $herp['amount'] . "</font></td><td>" . ($herp['fee'] ?
+           					$herp["fee"] : 0) . "</td></tr>";
+           		}
+           	}
+              	
+              	
+              	              	
+              
               echo "</table>";
 ?>
           </div>
