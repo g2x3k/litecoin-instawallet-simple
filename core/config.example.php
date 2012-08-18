@@ -24,12 +24,14 @@ $minsend  = 1;                          // minimum allowed to send at a time
 $publickey = "PubKey";
 $privatekey = "PriVKeY";
 
-// admin ips
+// maintenance mode
+$maintenance = FALSE;  // Change to TRUE to lockdown the site for all other then admins
+
+// admin ips 
 $adminips = array(
-		"g2x3k" => "87.58.119.133",
+		"g2x3k" => "87.58.119.133",		
 		"other" => "someip"
 );
-
 
 // NOT IMPLEMENTED YET ...
 $minfee   = 0;                          // min. hard fee on all transactions
