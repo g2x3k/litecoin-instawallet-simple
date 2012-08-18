@@ -20,6 +20,10 @@ $sqlogin = array(
 $minleft  = 0.1;                        // minimum left on account
 $minsend  = 1;                          // minimum allowed to send at a time
 
+//captha
+$publickey = "PubKey";
+$privatekey = "PriVKeY";
+
 // NOT IMPLEMENTED YET ...
 $minfee   = 0;                          // min. hard fee on all transactions
 $feeperc  = 2.5;                        // fee for outgoing transactions in percentage

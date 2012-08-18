@@ -10,10 +10,6 @@ include("address.inc");
 include("recaptchalib.inc");
 
 
-//captha
-$publickey = "6LfYSssSAAAAAF2w_TeMklmv-6VWUDhcECr9rWfI";
-$privatekey = "6LfYSssSAAAAAPntQz9H0twbsdyk8kQHO_F4mupD";
-
 // init
 
 $btclient = new bitcoinClient("http",$btclogin["username"],$btclogin["password"],$btclogin["host"],$btclogin["port"]);
